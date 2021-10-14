@@ -1,24 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PetCard from '../components/PetCard'
 
-export class PetList extends Component {
+const PetList = ({pets}) => {
 
-    // componentDidMount() {
-    //     console.log(this.props)
-    // }
-  
 
-    render() {
-        const pets = this.props.pets.map((pet, i) => <PetCard key={i} pet={pet} />)
-     
+        const petList = pets.map((pet, i) => <PetCard key={i} pet={pet} />)
 
         return (
             <div>
                 <h3>PetList</h3>
-                <ul>{pets}</ul> 
+                <ul>{petList}</ul> 
             </div>
         )
     }
-}
 
 export default PetList
